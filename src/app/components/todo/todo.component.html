@@ -1,0 +1,5 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">To-Do App!</h1>
+    <app-todo-form (addTodo)="addTodo($event)"></app-todo-form>
+    <app-todo-list [todos]="todos" (onToggle)="toggleTodo($event)" (onDelete)="deleteTodo($event)"></app-todo-list>
+</div>

@@ -1,0 +1,21 @@
+<div class="card border-warning mb-3">
+    <div class="card-header">TodoList</div>
+    <div class="card-body">
+        <p class="card-text">Let's get some work done!</p>
+        <ul class="list-group">
+            @for (todo of todos; track todo.task; let i = $index) {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span [class.text-decoration-line-through]="todo.completed">{{ todo.task }}</span>
+                <div class="d-flex align-items-center">
+                    <div class="form-check me-3">
+                        <input type="checkbox" class="form-check-input" [checked]="todo.completed"
+                            (change)="handleToggle(i)" id="todoCheckbox{{i}}" />
+                        <label class="form-check-label text-dark" for="todoCheckbox{{i}}">Complete</label>
+                    </div>
+                    <button (click)="handleDelete(i)" class="btn btn-danger btn-sm">Delete</button>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

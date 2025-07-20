@@ -1,0 +1,12 @@
+<div class="card bg-primary text-white mb-3">
+    <div class="card-header">TodoForm</div>
+    <div class="card-body">
+        <h5 class="card-title float-end">Add New To-Do</h5>
+        <div class="input-group mb-3">
+            <input [(ngModel)]="newTask" class="form-control" placeholder="Enter new task" />
+        </div>
+        <div class="text-end">
+            <button (click)="onAdd()" class="btn btn-light">Add</button>
+        </div>
+    </div>
+</div>
